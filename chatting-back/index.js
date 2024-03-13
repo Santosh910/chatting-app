@@ -2,8 +2,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
-import cors from 'cors';
+
 import router from './routes/index.js';
+
 
 import cookieParser from 'cookie-parser'
 // import UserModel from './models/User.model.js';
@@ -11,11 +12,13 @@ import cookieParser from 'cookie-parser'
 import path from "path"
 import { app,server } from './socket/socket.js';
 
+const PORT = process.env.PORT || 5000;
+
 const __dirname = path.resolve();
 
 dotenv.config()
 app.use(morgan('dev'))
-app.use(cors())
+
 app.use(cookieParser())
 app.use(express.json())
 
@@ -35,7 +38,7 @@ app.get("*", (req, res) => {
 
 mongoose.connect(process.env.MONGOURI).then(()=>console.log("database connected"))
 
-server.listen(8001,()=>console.log("app is running on port 8001"))
+server.listen(PORT,()=>console.log(`app is running on port ${PORT}`))
 
 // const wss = new WebSocketServer({server});
 // wss.on('connection',(connection,req)=>{

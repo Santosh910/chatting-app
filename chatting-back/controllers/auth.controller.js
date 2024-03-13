@@ -42,7 +42,7 @@ export const Signup = async (req, res) => {
         })
 
         if (newUser) {
-            generateTokenAndSetCookie({userId:newUser._id}, res);
+            generateTokenAndSetCookie(newUser._id, res);
             await newUser.save();
 
             res.status(201).json({
@@ -95,7 +95,7 @@ export const Login = async (req, res) => {
         // }
 
         // const token = await Jwt.sign({id:user._id},process.env.JWT_SEC)
-        generateTokenAndSetCookie({userId:user._id}, res)
+        generateTokenAndSetCookie(user._id, res)
 
          res.status(200).json({
                 _id: user._id,

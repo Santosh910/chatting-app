@@ -9,6 +9,6 @@ const router = Router();
 router.use('/auth',authRoutes)
 router.use('/conver',converRoutes)
 router.use('/mess',messageRoutes)
-router.use('/user',userRoutes)
+router.use('/users',userRoutes)
 
 export default router

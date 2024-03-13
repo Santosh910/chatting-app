@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url("D:\github data new\chatting-app\chatting-front\public\bg.png");
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2)), url("/bg.png");
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -14,7 +14,7 @@ body{
 }
 
 ::-webkit-scrollbar-track{
-    /* background: #555; */
+    background: #555;
 }
 
 ::-webkit-scrollbar-thumb {
