@@ -6,7 +6,7 @@
   "scripts": {
     "server":"nodemon backend/index.js",
     "start": "nodemon backend/index.js",
-    "build":"npm install && npm install --prefix chat-front && npm run build --prefix chat-front",
+    "build":"npm install ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -34,3 +34,5 @@
   },
   "type": "module"
 }
+
+

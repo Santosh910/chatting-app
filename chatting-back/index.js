@@ -29,11 +29,11 @@ app.get("/test",(req,res)=>{
 
 app.use("/api",router)
 
-app.use(express.static(path.join(__dirname, "/chat-front/dist")));
+// app.use(express.static(path.join(__dirname, "/chat-front/dist")));
 
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "chat-front", "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, "chat-front", "dist", "index.html"));
+// });
 
 
 mongoose.connect(process.env.MONGOURI).then(()=>console.log("database connected"))
