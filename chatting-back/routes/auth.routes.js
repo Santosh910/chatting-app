@@ -6,7 +6,7 @@ const router = Router();
 
 router.post('/signup',Signup)
 router.post('/login',Login)
-router.post('/logout',Logout)
+router.get('/logout',Logout)
 // router.post('/get-user',GetCurrentUser)
 // router.get('/get-friends',getFriends)
 

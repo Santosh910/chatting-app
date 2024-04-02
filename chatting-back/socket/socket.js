@@ -10,11 +10,11 @@ const io = new Server(server, {
 		origin: ["http://localhost:3000"],
 		methods: ["GET", "POST"],
 	},
-});
+}); 
 
 export const getReceiverSocketId = (receiverId) => {
 	return userSocketMap[receiverId];
-};
+}; 
 
 const userSocketMap = {}; // {userId: socketId}
 
